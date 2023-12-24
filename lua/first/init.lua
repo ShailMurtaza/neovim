@@ -19,6 +19,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+
 vim.opt.wrap = false
 
 vim.opt.hlsearch = true
@@ -33,7 +34,7 @@ vim.opt.cursorcolumn = true
 vim.opt.swapfile = true
 vim.opt.backup = true
 
-vim.o.guifont ="Fira Code:h11"
+vim.o.guifont ="Fira Code:h9"
 
 vim.opt.backupdir = "/tmp/nvim/backup"
 vim.opt.directory = "/tmp/nvim/swap"
