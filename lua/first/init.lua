@@ -34,8 +34,19 @@ vim.opt.cursorcolumn = true
 vim.opt.swapfile = true
 vim.opt.backup = true
 
-vim.o.guifont ="Fira Code:h9"
+vim.o.guifont ="Fira Code:h10"
 
+-- vim.opt.autochdir = true
 vim.opt.backupdir = "/tmp/nvim/backup"
 vim.opt.directory = "/tmp/nvim/swap"
+
+
+vim.api.nvim_exec([[
+ augroup dosini_filetype
+   autocmd!
+   autocmd BufNewFile,BufRead *.vifm,vifmrc setfiletype vim
+ augroup END
+]], false)
+
+
 
