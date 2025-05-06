@@ -7,14 +7,14 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 require('mason').setup({})
-require('mason-lspconfig').setup({
+require('mason-lspconfig').setup{
   -- Replace the language servers listed here 
   -- with the ones you want to install
   ensure_installed = {'tsserver', 'lua_ls', 'html'},
   handlers = {
     lsp_zero.default_setup,
   },
-})
+}
 
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
