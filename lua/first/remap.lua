@@ -24,3 +24,11 @@ map("n", "<leader>q", nvim_tree_api.tree.focus)
 map("n", "<leader>r", nvim_tree_api.tree.change_root_to_parent)
 -- ############
 
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
