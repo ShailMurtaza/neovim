@@ -1,6 +1,6 @@
 require("first.remap")
-require("first.plugin")
--- require("first.packer")
+require("lazy_setup")
+require("lazy").setup("first.plugin")
 
 
 vim.opt.nu = true
