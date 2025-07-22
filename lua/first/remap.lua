@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 local function map(mode, key, f)
     vim.keymap.set(mode, key, f, {})
 end;

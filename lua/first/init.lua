@@ -1,6 +1,8 @@
-require("first.remap")
-require("lazy_setup")
+vim.g.mapleader = " "
+
+require("first.lazy")
 require("lazy").setup("first.plugin")
+require("first.remap")
 
 
 vim.opt.nu = true
