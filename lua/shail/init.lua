@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 
-require("first.lazy_setup")
-require("lazy").setup("first.plugin")
-require("first.remap")
+require("shail.lazy_setup")
+require("lazy").setup("shail.plugins")
+require("shail.remap")
 
 
 vim.opt.nu = true
@@ -49,6 +49,4 @@ vim.api.nvim_exec([[
    autocmd BufNewFile,BufRead *.vifm,vifmrc setfiletype vim
  augroup END
 ]], false)
-
-
 
