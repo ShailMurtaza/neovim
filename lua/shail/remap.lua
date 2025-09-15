@@ -21,5 +21,3 @@ map("n", "<leader>t", nvim_tree_api.tree.toggle)
 map("n", "<leader>q", nvim_tree_api.tree.focus)
 map("n", "<leader>r", nvim_tree_api.tree.change_root_to_parent)
 -- ############
-
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
