@@ -1,16 +1,16 @@
 return {
-    "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig", -- Basic configs for different language servers
 
     dependencies = {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-cmdline",
-        "hrsh7th/nvim-cmp",
-        "L3MON4D3/LuaSnip",
-        "saadparwaiz1/cmp_luasnip",
+        "williamboman/mason.nvim", -- Manager for language servers, linters etc
+        "williamboman/mason-lspconfig.nvim", -- Manage installed LSP servers
+        "hrsh7th/nvim-cmp", -- Completion engine. Alternative to builtin omnifunc
+        "hrsh7th/cmp-nvim-lsp", -- LSP completion
+        "hrsh7th/cmp-buffer", -- Current Buffer Completion. Used for searching
+        "hrsh7th/cmp-path", -- Source for Filesystem paths. Used to autocomplete files path
+        "hrsh7th/cmp-cmdline", -- Neovim command line completion
+        "L3MON4D3/LuaSnip", -- Provides snippets functionality
+        "saadparwaiz1/cmp_luasnip", -- Used to autocompelete snippets
     },
     config = function()
 
