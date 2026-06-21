@@ -11,13 +11,19 @@ return {
                 json = { "prettier" },
                 html = { "prettier" },
                 css = { "prettier" },
+                xml = { "xmlformatter" },
+            },
+            formatters = {
+                xmlformatter = {
+                    prepend_args = { "--indent", "4" },
+                },
             },
         })
         vim.api.nvim_create_autocmd("BufWritePre", {
-            pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
             callback = function(args)
-                require("conform").format({ bufnr = args.buf })
+                require("conform").format({ bufnr = args.buf, lsp_fallback = true })
             end,
         })
     end
 }
+

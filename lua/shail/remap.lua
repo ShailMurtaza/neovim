@@ -10,8 +10,25 @@ map("v", "<C-x>", "\"+d")
 -- ######
 
 -- Telescope
+local file_ignore_patterns = {
+    "yarn%.lock",
+    "node_modules/",
+    "raycast/",
+    "dist/",
+    "%.next",
+    "%.git/",
+    "%.gitlab/",
+    "build/",
+    "target/",
+    "package%-lock%.json",
+}
 local telescope_builtin = require("telescope.builtin")
-map("n", "<leader>f", telescope_builtin.find_files)
+map("n", "<leader>f", function()
+    telescope_builtin.find_files({
+        file_ignore_patterns = file_ignore_patterns,
+    })
+end)
+
 map("n", "<leader>a", telescope_builtin.buffers)
 -- ############
 
